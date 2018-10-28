@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700&amp;subset=korean" rel="stylesheet">
+	<title>게임 여성캐릭터</title>
+	<style>
+	html { overflow-y: hidden; scroll-behavior: smooth;}
+		body { background: black; width: 1920px; height: 4320px; margin: 0px; }
+		h1 { font-family: 'Noto Sans KR', sans-serif; color: white; text-align: center; font-size: 5em; }
+		p { font-family: 'Noto Sans KR', sans-serif; font-size: 4em; margin: 10px; }
+		
+		#myTitle { height: 500px; line-height: 800px; 
+					animation: titleMove 3s linear infinite forwards; }
+
+		#Mai { width: 300px; height: 300px; background-image: url(1.gif); background-size: cover; background-position: center; border-radius: 50%; position: absolute; left: 300px; top: 100px; cursor: pointer;}
+		#closers { width: 300px; height: 300px; background-image: url(2.gif); background-size: cover; background-position: center; border-radius: 50%; position: absolute; left: 1400px; top: 400px; cursor: pointer;}
+		#closersTwo { width: 200px; height: 200px; background-image: url(2-1.gif); background-size: cover; background-position: center; border-radius: 50%; position: absolute; left: 1570px; top: 600px; cursor: pointer;}
+		#succubus { width: 300px; height: 300px; background-image: url(3.gif); background-size: cover; background-position: center; border-radius: 50%; position: absolute; left: 500px; top: 600px; cursor: pointer;}
+
+		#but { width: 80px; height: 80px; background: white; position: fixed; top: 0px; right: 10px; line-height: 80px; text-align: center; margin-top: 20px; font-size: 4em; border-radius: 50%; cursor: pointer;}
+		#butt { width: 80px; height: 80px; position: fixed; top: 100px; right: 10px; line-height: 80px; text-align: center; margin-top: 20px; background-image: url(1.gif); background-size: cover; background-position: center; border-radius: 50%; cursor: pointer;}
+		#buttt { width: 80px; height: 80px; position: fixed; top: 200px; right: 10px; line-height: 80px; text-align: center; margin-top: 20px; background-image: url(2.gif); background-size: cover; background-position: center; border-radius: 50%; cursor: pointer;}
+		#butttt { width: 80px; height: 80px; position: fixed; top: 300px; right: 10px; line-height: 80px; text-align: center; margin-top: 20px; background-image: url(3.gif); background-size: cover; background-position: center; border-radius: 50%; cursor: pointer;}
+
+		#scroll11 { width: 1720px; height: 1080px; position: absolute; left: 50px; top: 1080px; margin: 0px; color: white; padding-left: 50px; padding-right: 50px; }
+
+		#gameMachine { width: 1000px; position: absolute; left: 400px; top: 1180px; z-index: 2;}
+		#gameMachine img { width: 1000px; }
+		#onScreen img { height: 100px; position: absolute; left: 700px; top: 1140px; z-index: 3; cursor: pointer;}
+		#inScreen img { height: 280px; position: absolute; left: 630px; top: 1475px; z-index: 3; cursor: pointer;}
+		#ffffImg { position: absolute; width: 625px; left: 593px; top: 1400px; border-radius: 1%; z-index: 4; opacity: 0;
+			animation: moveVideo 2s forwards paused; }
+
+		#scroll22 { width: 1720px; height: 1080px; position: absolute; left: 0px; top: 2160px; margin: 0px; padding-left: 50px; padding-right: 50px; color: white;}
+		#scroll2 { width: 1720px; height: 1080px; position: absolute; left: 5px; top: 2165px; margin: 0px; padding-left: 50px; padding-right: 50px;
+			animation: test 2s infinite;}
+
+		#scroll3 { width: 1720px; height: 1080px; background: red; position: absolute; left: 0px; top: 3240px; margin: 0px; padding-left: 50px; padding-right: 50px; z-index: 2; }
+		#scroll3:hover { background: black; color: green; z-index: 4;}
+		#box {width: 235px; height: 70px; background: red; z-index: 3; position: absolute; left: 750px; top: 3545px;}
+		#box1 {width: 270px; height: 70px; background: red; z-index: 3; position: absolute; left: 1050px; top: 3545px;}
+		#box2 {width: 250px; height: 70px; background: red; z-index: 3; position: absolute; left: 55px; top: 3640px;}
+		#box3 {width: 120px; height: 70px; background: red; z-index: 3; position: absolute; left: 190px; top: 3740px;}
+		#box4 {width: 185px; height: 70px; background: red; z-index: 3; position: absolute; left: 370px; top: 3740px;}
+		#box5 {width: 250px; height: 70px; background: red; z-index: 3; position: absolute; left: 595px; top: 3740px;}
+		#box6 {width: 120px; height: 70px; background: red; z-index: 3; position: absolute; left: 135px; top: 3830px;}
+
+
+		@keyframes titleMove{
+				from{}
+				to{ transform: rotateY(360deg); }
+			}
+
+		@keyframes moveVideo {
+			from { width: 0px; height: 0px;}
+			to { width: 625px; height: 350px; }
+		}
+
+		@keyframes test {
+			0% { color : red; }
+			25% { color: yellow; }
+			50% { color: blue; }
+			75% { color: green; }
+			100% { color: violet; }
+		}
+
+	</style>
+</head>
+
+<body>
+	<audio id="myMusic">
+		<source src="boss.mp3" type="audio/mpeg">
+	</audio>
+	<div id="myTitle">
+		<h1>??? 노출도 = 전투력 ???</h1>
+	</div>
+
+	<div id="Mai"></div>
+	<div id="closers"></div>
+	<div id="closersTwo"></div>
+	<div id="succubus"></div>
+
+	<div id="but">?</div>
+	<div id="butt"></div>
+	<div id="buttt"></div>
+	<div id="butttt"></div>
+
+	<div id="scroll1">
+	</div>
+
+	<div id="inScreen">
+		<img id="inScreenImg" src="mai1.gif">
+	</div>
+	<div id="gameMachine">
+		<img src="game.png">
+	</div>
+	<div id="onScreen">
+		<img id="onScreenImg" src="athena.gif">
+	</div>
+	<div id="ffff">
+		<img id="ffffImg" src="fuck.gif">
+	</div>
+
+
+	<div id="scroll2">
+		<p>여캐한테 노출이 없으면 게임이 망한다?<br>노출은 만화, 애니메이션 등 창작물에서 여성 캐릭터에 특히 <br>상당히 중요하게, 아니 여캐의 존재 이유로 여겨지는 요소이다. <br>남성 캐릭터의 노출 여부를 따지는 경우도 물론 있으나, <br>대부분은 여성 캐릭터에 한해서 적용된다. <br>현실과는 다르게 대부분의 2D 미소녀 캐릭터나 게임 여캐의 경우 노출 정도가 높을수록 방어력도 올라간다. 비키니 아머 같이 <br>갑옷이면서 노출도가 높은 사례는 쉽게 찾아볼 수 있다. <br>기본 복장의 노출도가 높지 않더라도 캐릭터가 진정한 능력을 <br>발휘하면 노출이 늘어나는 형식을 갖고있는 경우가 많다.</p>
+	</div>
+	<div id="scroll22">
+		<p>여캐한테 노출이 없으면 게임이 망한다?<br>노출은 만화, 애니메이션 등 창작물에서 여성 캐릭터에 특히 <br>상당히 중요하게, 아니 여캐의 존재 이유로 여겨지는 요소이다. <br>남성 캐릭터의 노출 여부를 따지는 경우도 물론 있으나, <br>대부분은 여성 캐릭터에 한해서 적용된다. <br>현실과는 다르게 대부분의 2D 미소녀 캐릭터나 게임 여캐의 경우 노출 정도가 높을수록 방어력도 올라간다. 비키니 아머 같이 <br>갑옷이면서 노출도가 높은 사례는 쉽게 찾아볼 수 있다. <br>기본 복장의 노출도가 높지 않더라도 캐릭터가 진정한 능력을 <br>발휘하면 노출이 늘어나는 형식을 갖고있는 경우가 많다.</p>
+	</div>
+
+	<div id="scroll3">
+		<p>서큐버스는 유럽의 옛 전설에 나오는 여자의 모습을 한 몽마로, <br>남성을 유혹하여 정기를 갈취한 후 자신의 생명력으로 이용하고 <br>자신과 같은 서큐버스로 만들어 성적인 노예로 만들어버린다. <br>게임에서 서큐버스는 주로 가터벨트나 딱 붙는 옷으로 <br>중요 부위만 간신히 가린 모습으로 묘사된다. <br>특히 가슴과 허벅지, 엉덩이 살을 적나라하게 드러내고 있으며, <br>그 노출 정도는 서큐버스의 성 전환 버전이라고 할 수 있는 <br>인큐버스 캐릭터보다 훨씬 높다. <br>서큐버스의 정체는 추악한 노파지만, 이러한 묘사 때문에 <br>대부분의 사람들은 서큐버스가 예쁘다고 생각한다.</p>
+	</div>
+	<div id="box"></div>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+	<div id="box5"></div>
+	<div id="box6"></div>
+
+	<script type="text/javascript">
+		Mai.onclick = function() {
+			document.documentElement.scrollTop = 1080;
+		}
+		closers.onclick = function() {
+			document.documentElement.scrollTop = 2160;
+		}
+		closersTwo.onclick = function() {
+			document.documentElement.scrollTop = 2160;
+		}
+		succubus.onclick = function() {
+			document.documentElement.scrollTop = 3240;
+		}
+
+				scroll1.onclick = function() {
+					document.documentElement.scrollTop = 0;
+				}
+
+		//
+		but.onclick = function() {
+			document.documentElement.scrollTop = 0;
+		}
+		butt.onclick = function() {
+			document.documentElement.scrollTop = 1080;
+		}
+		buttt.onclick = function() {
+			document.documentElement.scrollTop = 2160;
+		}
+		butttt.onclick = function() {
+			document.documentElement.scrollTop = 3240;
+		}
+		
+		//
+		var toggle = "off";
+		inScreen.onclick = function() {
+			if (toggle=="off") {
+				inScreenImg.setAttribute("src","mai2.gif");
+				inScreenImg.style.height = 210 + "px";
+				inScreenImg.style.top = 1540 + "px";
+				toggle = "on";
+			} else {
+				inScreenImg.setAttribute("src","mai1.gif");
+				inScreenImg.style.height = 280 + "px";
+				inScreenImg.style.top = 1475 + "px";
+				toggle = "off";
+			}
+		}
+
+		var b = 1;
+		onScreen.onclick = function() {
+			if (b==1) {
+			ffffImg.style.animationPlayState = "running";
+			ffffImg.style.opacity = 1;
+			inScreenImg.style.opacity = 0;
+			ffffImg.style.zIndex = 4;
+			b = 2;
+			}else {
+				ffffImg.style.zIndex = 0;
+				ffffImg.style.opacity = 0;
+				inScreenImg.style.opacity = 1;
+				b = 1;
+			}
+		}
+
+		window.onscroll = function () {
+			var t = document.documentElement.scrollTop;
+			if (t > 1000) {
+				myMusic.play();
+			}
+		}
+	</script>
+</body>
+</html>
